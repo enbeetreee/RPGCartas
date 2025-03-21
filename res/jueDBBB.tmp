@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgmptv5uwqwl3"]
+
+[ext_resource type="Script" path="res://res/juego.gd" id="1_bhhve"]
+[ext_resource type="PackedScene" uid="uid://dm8le8fyypss7" path="res://res/carta.tscn" id="1_wx1qc"]
+[ext_resource type="PackedScene" uid="uid://bett1k8ugf7vb" path="res://res/carta_space.tscn" id="2_odsxj"]
+[ext_resource type="PackedScene" uid="uid://b38dh26ax5s2v" path="res://res/mano.tscn" id="4_ipoxi"]
+[ext_resource type="PackedScene" uid="uid://dfj8g22rgidto" path="res://res/mazo.tscn" id="5_23mko"]
+
+[node name="juego" type="Node2D"]
+script = ExtResource("1_bhhve")
+
+[node name="spaces" type="Node2D" parent="."]
+
+[node name="carta_space" parent="spaces" instance=ExtResource("2_odsxj")]
+position = Vector2(156, 255)
+scale = Vector2(0.22, 0.22)
+id = 1
+
+[node name="carta_space2" parent="spaces" instance=ExtResource("2_odsxj")]
+position = Vector2(323, 255)
+scale = Vector2(0.22, 0.22)
+id = 2
+
+[node name="carta_space3" parent="spaces" instance=ExtResource("2_odsxj")]
+position = Vector2(491, 255)
+scale = Vector2(0.22, 0.22)
+id = 3
+
+[node name="carta_space4" parent="spaces" instance=ExtResource("2_odsxj")]
+position = Vector2(656, 255)
+scale = Vector2(0.22, 0.22)
+id = 4
+
+[node name="carta_space5" parent="spaces" instance=ExtResource("2_odsxj")]
+position = Vector2(819, 255)
+scale = Vector2(0.22, 0.22)
+id = 5
+
+[node name="mano" parent="spaces" instance=ExtResource("4_ipoxi")]
+position = Vector2(95, 577)
+scale = Vector2(0.22, 0.22)
+
+[node name="carta" parent="." instance=ExtResource("1_wx1qc")]
+position = Vector2(379, 590)
+scale = Vector2(0.22, 0.22)
+
+[node name="carta2" parent="." instance=ExtResource("1_wx1qc")]
+position = Vector2(189, 604)
+scale = Vector2(0.22, 0.22)
+
+[node name="carta3" parent="." instance=ExtResource("1_wx1qc")]
+position = Vector2(593, 602)
+scale = Vector2(0.22, 0.22)
+
+[node name="mazo" parent="." instance=ExtResource("5_23mko")]
+position = Vector2(939, 535)
+scale = Vector2(0.22, 0.22)

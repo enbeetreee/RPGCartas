@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfj8g22rgidto"]
+
+[ext_resource type="Script" path="res://res/mazo.gd" id="1_dl5aj"]
+[ext_resource type="Texture2D" uid="uid://d4mbl8jkh714n" path="res://img/mazo.png" id="2_vbnsc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc6ci"]
+size = Vector2(653, 910)
+
+[node name="mazo" type="Area2D"]
+script = ExtResource("1_dl5aj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("2_vbnsc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_cc6ci")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

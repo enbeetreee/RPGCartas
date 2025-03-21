@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bett1k8ugf7vb"]
+
+[ext_resource type="Script" path="res://res/carta_space.gd" id="1_rwjbh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovvm"]
+size = Vector2(654, 908)
+
+[node name="carta_space" type="StaticBody2D" groups=["dropable"]]
+script = ExtResource("1_rwjbh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -326.0
+offset_top = -454.0
+offset_right = 327.0
+offset_bottom = 454.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dovvm")
